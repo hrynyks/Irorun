@@ -1,0 +1,75 @@
+.how {
+    padding-bottom: 29px;
+
+    &__title {
+        font-size: toRem(45);
+        font-weight: 400;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+
+        @include a (tablet-xl) {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+    }
+
+    &__item {
+        width: 288px;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 10px #B7B7B7;
+        border-radius: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 42px 20px;
+        position: relative;
+
+        &-1 {
+            border-top: 12px solid #582EFF;
+        }
+
+        &-2 {
+            border-top: 12px solid #FF814A;
+        }
+
+        &-3 {
+            border-top: 12px solid #31C5A1;
+        }
+
+        &-arrow::after {
+            content: "";
+            position: absolute;
+            background: url(/src/assets/images/how-arrow.png);
+            width: 57px;
+            height: 55px;
+            right: -64px;
+            top: 50%;
+            transform: translateY(-50%);
+
+            @include a (laptop) {
+                display: none;
+            }
+        }
+
+        &-img {
+            margin-bottom: 49px;
+        }
+
+        &-span {
+            display: block;
+            font-size: toRem(17);
+            margin-bottom: 31px;
+        }
+
+        &-descr {
+            line-height: 25px;
+            text-align: center;
+        }
+    }
+}

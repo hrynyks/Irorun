@@ -1,0 +1,47 @@
+.save {
+    padding-bottom: 88px;
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include a (tablet-xl) {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    &__content {
+        max-width: 392px;
+        width: 100%;
+        margin-top: 64px;
+
+        @include a (tablet-xl) {
+            order: -1;
+            text-align: center;
+        }
+    }
+
+    &__title {
+        font-size: toRem(45);
+        line-height: 50px;
+        font-weight: 400;
+        margin-bottom: 32px;
+    }
+
+    &__descr {
+        font-size: toRem(24);
+        line-height: 35px;
+        margin-bottom: 30px;
+    }
+
+    &__links {
+        display: flex;
+        gap: 10px;
+
+        @include a (tablet-xl) {
+            justify-content: center;
+        }
+    }
+}

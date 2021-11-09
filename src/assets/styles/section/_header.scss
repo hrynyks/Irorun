@@ -1,0 +1,44 @@
+.header {
+    padding-top: 45px;
+    position: relative;
+
+    &-wrap {
+        display: flex;
+        align-items: center;
+        gap: 165px;
+
+        @include a (mobile) {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    &__items {
+        display: flex;
+        gap: 40px;
+    }
+
+    &__item {
+        &-link {
+            font-size: toRem(15);
+            color: $dark-color;
+
+            &:hover {
+                color: #0082F3;
+            }
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        top: 128px;
+        left: -40px;
+        transform: rotate(90deg);
+        background-color: #39CDCC;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 0px 0px 6px 6px;
+        padding: 8px 26px;
+        font-size: toRem(10);
+    }
+
+}
